@@ -1,6 +1,11 @@
 Twinecoin Consensus Library
 ===========================
 
+| Build | Status|
+| :-----------: | :--------------: |
+| Development | [![Build Status](https://travis-ci.org/twinecoin/twineconsensus.svg?branch=devel)](https://github.com/twinecoin/twineconsensus/tree/devel) |
+| Release | [![Build Status](https://travis-ci.org/twinecoin/twineconsensus.svg?branch=master)](https://github.com/twinecoin/twineconsensus/tree/master) |
+
 This is the Twinecoin consensus library.
 
 This library defines the consensus rules for Twinecoin.  The implementation is
