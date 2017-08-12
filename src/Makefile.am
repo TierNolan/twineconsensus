@@ -1,4 +1,4 @@
-AM_CFLAGS                    = -I$(top_srcdir)/include -I$(top_srcdir)/secp256k1/src -std=c99 -pedantic
+AM_CFLAGS                    = -I$(top_srcdir)/include -I$(top_srcdir)/secp256k1/src -fvisibility=hidden -std=c99 -pedantic
 
 CLEANFILES                   = tw_lic_check
 
