@@ -11,6 +11,9 @@ include_HEADERS              = ../include/twineconsensus.h
 
 all-local: tw_lic_check
 
+install-exec-hook:
+	../scripts/install_natives.sh $(host) $(prefix) @twcon_ver@ $(TW_NATIVE_PATH)
+
 tw_lic_check: $(include_HEADERS) $(libtwineconsensus_la_SOURCES)
 	../scripts/check_licence.sh $(include_HEADERS) $(libtwineconsensus_la_SOURCES)
 	touch tw_lic_check

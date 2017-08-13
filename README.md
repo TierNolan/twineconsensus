@@ -33,3 +33,10 @@ Windows Dlls can be cross compiled in Linux.  The configure step is different.
 
     ./configure --host=x86_64-w64-mingw32
 
+Setting Natives Directory
+-------------------------
+
+If this variable is set, make install will install the shared library to the natives
+directory.  The directory is structured for import into java.
+
+export TW_NATIVE_PATH=<path to java natives directory>
