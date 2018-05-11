@@ -3,7 +3,7 @@ AM_CFLAGS                    = -I$(top_srcdir)/include -I$(top_srcdir)/secp256k1
 CLEANFILES                   = tw_lic_check
 
 lib_LTLIBRARIES		     = libtwineconsensus.la
-libtwineconsensus_la_SOURCES = twineconsensus.c tw_u256.c tw_sha256.c tw_secp256k1.c
+libtwineconsensus_la_SOURCES = twineconsensus.c tw_u256.c tw_sha256.c tw_secp256k1.c tw_context.c
 libtwineconsensus_la_LDFLAGS = -no-undefined -version-info @twcon_ver@:@twcon_rev@:@twcon_age@
 libtwineconsensus_la_LIBADD  = ../secp256k1/libsecp256k1.la
 

@@ -15,6 +15,8 @@
  #endif
 #endif
 
+typedef struct _tw_context tw_context;
+
 /**  
  * Interface version test
  *
@@ -23,6 +25,31 @@
  *   version:  The library version
  *   return:  non-zero if the version is supported
  */
-extern uint32_t TW_LIBEXPORT twlib_test_version(uint32_t version);
+TW_LIBEXPORT uint32_t twlib_test_version(uint32_t version);
+
+/**
+ * Creates a Twinecoin consensus context for a particular chain
+ * 0: Main chain
+ * 1: Test chain
+ * 2: Regression test chain
+ *
+ * chain_id: the id of the chain for the context
+ * return: a pointer to an initialized Twinecoin consensus context, or NULL if out of memory
+ */
+TW_LIBEXPORT tw_context* twlib_create_context(const uint32_t chain_id);
+
+/**
+ * Frees a Twinecoin consensus context
+ *
+ * context: a pointer to the Twinecoin consensus context to be freed
+ */
+TW_LIBEXPORT void twlib_free_context(tw_context* context);
+
+/**
+ * Checks POW header's proof of work
+ *
+ * return: 1 if the POW Header meets the claimed POW
+ */
+TW_LIBEXPORT uint32_t twlib_check_pow_header_pow(tw_context* context, const uint32_t length, const uint8_t* pow_header);
 
 #endif
